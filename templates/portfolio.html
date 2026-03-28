@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rizaldi</title>
+    <link href="{{ url_for('static', filename='portfolio_style.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">portfolio<span>.me</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact" class="btn-cta">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <img src="{{ url_for('static', filename='assets/foto-fajar.jpg') }}" alt="Foto Profil" class="profile-img">
+            <h2>Hi, I'm Muhammad Fajar Ramdani.</h2>
+            <p>Seorang Web Developer Berbakat & Kreatif.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn">Lihat Karya</a>
+                <a href="{{ url_for('static', filename='assets/vendor/resume/resume.pdf') }}" class="btn-outline" target="_blank">Unduh Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h3>Tentang Saya</h3>
+            <div class="about-text">
+                <p>Saya adalah seorang pengembang web profesional yang fokus pada pembuatan *user interface* (UI) yang bersih, fungsional, dan ramah pengguna.</p>
+                <p>Saya ahli dalam menggunakan Flask (Python) untuk *backend*, serta HTML, CSS, dan JavaScript untuk menciptakan pengalaman *frontend* yang dinamis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h3>Layanan Saya</h3>
+            <div class="service-cards">
+                <div class="card">
+                    <h4>Web Development</h4>
+                    <p>Membangun situs web dari awal dengan Flask & Python.</p>
+                </div>
+                <div class="card">
+                    <h4>UI/UX Design</h4>
+                    <p>Mendesain antarmuka yang modern, bersih, dan responsif.</p>
+                </div>
+                <div class="card">
+                    <h4>Troubleshooting</h4>
+                    <p>Membantu memperbaiki error pada kode Flask/Jinja2.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h3>Portofolio</h3>
+            <div class="portfolio-grid">
+    <div class="portfolio-item">
+        <img src="{{ url_for('static', filename='assets/proyek1.jpg') }}">
+    </div>
+    <div class="portfolio-item">
+        <img src="{{ url_for('static', filename='assets/proyek2.jpg') }}">
+    </div>
+    <div class="portfolio-item">
+        <img src="{{ url_for('static', filename='assets/proyek3.jpg') }}">
+    </div>
+</div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3>Hubungi Saya</h3>
+            <div class="contact-methods">
+                <a href="mailto:rizaldi.ay@email.com">Email Saya</a> |
+                <a href="#">WhatsApp</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RizaldiAY. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
